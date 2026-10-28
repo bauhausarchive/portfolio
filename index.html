@@ -34,7 +34,7 @@
 <style id="homepage-parallax">
 @media (min-width:701px) and (prefers-reduced-motion:no-preference){
   .parallax-on .work-panel .panel-media img{
-    transform:translate3d(0,var(--parallax-y,0px),0) scale(1.06);
+    transform:translate3d(0,var(--parallax-y,0px),0) scale(1.12);
     will-change:transform;
   }
 }
@@ -52,7 +52,7 @@
       const rect=panel.getBoundingClientRect();
       if(rect.bottom<0||rect.top>vh)continue;
       const progress=(vh-rect.top)/(vh+rect.height);
-      const offset=(.5-progress)*24;
+      const offset=(.5-progress)*72;
       panel.style.setProperty('--parallax-y',offset.toFixed(1)+'px');
     }
     frame=0;
